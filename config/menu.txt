@@ -1,0 +1,8 @@
+Run Genetic Algorithm
+Load and Display Map
+Load/Generate New Map
+View Current Configuration
+Test Worker Pool
+Run Single Generation
+Performance Comparison (4 Variants)  
+Exit

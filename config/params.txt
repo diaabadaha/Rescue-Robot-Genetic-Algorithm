@@ -1,0 +1,40 @@
+# Grid Dimensions
+GRID_X = 20
+GRID_Y = 20
+GRID_Z = 5
+
+# Genetic Algorithm Parameters
+POPULATION_SIZE = 40
+NUM_GENERATIONS = 30
+NUM_ROBOTS = 6
+
+# GA Rates (0.0 - 1.0)
+MUTATION_RATE = 0.1
+CROSSOVER_RATE = 0.8
+ELITISM_RATE = 0.1
+
+# Fitness Function Weights
+# f = w1*survivors + w2*coverage - w3*length - w4*risk
+# CRITICAL: Survivor weight MUST be dominant to prioritize rescue
+# Even with pure random GA, weights guide what gets selected
+WEIGHT_SURVIVORS = 0.50   # 50% - Still highest
+WEIGHT_LENGTH = 0.20      # 20% - Increase efficiency penalty
+WEIGHT_RISK = 0.15        # 15% - Safety matters
+WEIGHT_COVERAGE = 0.10    # 10% - Reduce exploration
+WEIGHT_TIME = 0.05        # 5% - Less time pressure
+
+# Parallel Processing (IPC)
+# Number of child worker processes for fitness computation
+NUM_WORKERS = 8
+
+# File Paths
+MAP_FILE = config/map.txt
+MENU_FILE = config/menu.txt
+
+# Termination Criteria
+MAX_STAGNATION = 5
+TIME_LIMIT = 300
+
+# Random Seed (0 = use time-based seed for non-deterministic behavior)
+# Set to a fixed value (e.g., 42, 123, 456) for reproducible results
+RANDOM_SEED = 0
